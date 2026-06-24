@@ -2,7 +2,7 @@ from http import HTTPStatus
 
 from fastapi import FastAPI, HTTPException
 
-from .schemas import Message, UserDB, UserList, UserPublic, UserSchema
+from schemas import Message, UserDB, UserList, UserPublic, UserSchema
 
 app = FastAPI()
 database: list[UserDB] = []
