@@ -232,6 +232,30 @@ wheels = [
 ]
 
 [[package]]
+name = "factory-boy"
+version = "3.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "faker" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ba/98/75cacae9945f67cfe323829fc2ac451f64517a8a330b572a06a323997065/factory_boy-3.3.3.tar.gz", hash = "sha256:866862d226128dfac7f2b4160287e899daf54f2612778327dd03d0e2cb1e3d03", size = 164146, upload-time = "2025-02-03T09:49:04.433Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/27/8d/2bc5f5546ff2ccb3f7de06742853483ab75bf74f36a92254702f8baecc79/factory_boy-3.3.3-py2.py3-none-any.whl", hash = "sha256:1c39e3289f7e667c4285433f305f8d506efc2fe9c73aaea4151ebd5cdea394fc", size = 37036, upload-time = "2025-02-03T09:49:01.659Z" },
+]
+
+[[package]]
+name = "faker"
+version = "40.28.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d4/70/195da553acbd4fdcabed8de15ccb42b9a7294dfe5dda15cd7f5b42a0cc8b/faker-40.28.0.tar.gz", hash = "sha256:a6d028347e9bd40bffa17b072d2d61b79ff4d84eb760978dde7f354104a4125c", size = 2022279, upload-time = "2026-07-01T15:43:30.054Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9a/06/4e296b7afe4b662748d88a165a16889ebb84ec2b41f1ead581ca0cb3921c/faker-40.28.0-py3-none-any.whl", hash = "sha256:c5d0c7bab37c1649326386ae2baa2830eb6ee9366664e55a5efede610acc2f05", size = 2060862, upload-time = "2026-07-01T15:43:28.265Z" },
+]
+
+[[package]]
 name = "fast-zero"
 version = "0.1.0"
 source = { virtual = "." }
@@ -248,6 +272,7 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "factory-boy" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
     { name = "pytest-cov" },
@@ -269,6 +294,7 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "factory-boy", specifier = ">=3.3.3" },
     { name = "pytest", specifier = ">=9.1.1" },
     { name = "pytest-asyncio", specifier = ">=1.4.0" },
     { name = "pytest-cov", specifier = ">=7.1.0" },
