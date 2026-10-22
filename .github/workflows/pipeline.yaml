@@ -21,10 +21,12 @@ jobs:
           python-version: '3.14'
 
       - name: Instalar o uv
-        run: pipx install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
 
       - name: Instalar dependências
-        run: uv install
+        run: uv sync
 
       - name: Executar testes
         run: uv run task test
